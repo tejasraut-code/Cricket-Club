@@ -3,11 +3,11 @@
 
 🚀 I built a responsive and interactive Cricket Club website clone using HTML, CSS, and JavaScript. This project replicates the look and feel of a modern sports club portal, featuring:
 
-Smooth transitions and scroll animations
+ > Smooth transitions and scroll animations
 
-Clean, user-friendly layout with interactive UI components
+ > Clean, user-friendly layout with interactive UI components
 
-Emphasis on responsiveness and visual aesthetics
+ > Emphasis on responsiveness and visual aesthetics
 
 🛠️ Technologies: HTML, CSS, JavaScript, GSAP, Locomotive Scroll
 
