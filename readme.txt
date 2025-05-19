@@ -1,6 +1,7 @@
 
 🔗 Cricket Club Website Clone – Frontend Development Project - UI 
 
+🔗 Live Demo: https://tejasraut-code.github.io/Cricket-Club/
 
 🚀 I built a responsive and interactive Cricket Club website clone using HTML, CSS, and JavaScript. This project replicates the look and feel of a modern sports club portal, featuring:
 
