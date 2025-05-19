@@ -3,9 +3,12 @@
     src: url(/GeneralSans-Medium.woff2)
 }
 
+*::selection {
+    background-color: white;
+    color: #aeda37;
+}
 
-
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
@@ -13,70 +16,98 @@
     color: white;
 }
 
+* {
+    font-family: 'GeneralSans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 html,
-body{
+body {
     height: 100%;
     width: 100%;
 }
 
-#cursor{
+#cursor {
     width: 20px;
     height: 20px;
     background-color: rgb(191, 240, 55);
     border-radius: 50%;
     position: fixed;
-    z-index: 99 ;
+    z-index: 99;
 }
 
-#cursor-blur{
+#cursor-blur {
     width: 300px;
     height: 300px;
     background-color: rgba(191, 240, 55, 0.192);
     border-radius: 50%;
     position: fixed;
     filter: blur(50px);
-    z-index: 9; 
+    z-index: 9;
 }
 
-#nav{
-    height: 120px;
+#nav {
+    height: 10vw;
     width: 100%;
-    /* background-color: #a554ed; */
+    gap: 2.5vw;
+    padding: 2vw 5vw;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 30px;
-    padding: 0 100px ;
     position: fixed;
+    font-family: GeneralSans;
     z-index: 99;
+    overflow: hidden;
 }
 
-#nav img{
-    height: 70px;
+#nav img {
+    height: 10vw;
 }
 
-#nav h4{
+#nav h4 {
     text-transform: uppercase;
     font-weight: 500;
+    font-size: 1.2vw;
 }
 
-video{
-    height: 100%;
+
+#nav h3 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2vw;
+}
+
+#nav #book {
+    height: 3.5vw;
+    padding: 2vw;
+    right: -10vw;
+    border-radius: 50px;
+    border: 4px solid #aeda37;
+    background-color: black;
+    align-items: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+video {
+    height: 100vh;
     width: 100%;
-    object-fit:cover;
+    object-fit: cover;
     position: fixed;
     z-index: -1;
 }
 
-#main{
+#main {
     position: relative;
-    background-color: rgba(0, 0, 0, 0.116);
-
+    background-color: rgba(0, 0, 0, );
 }
 
-#page1{
+#page1 {
     height: 100vh;
     width: 100%;
+    font-family: GeneralSans;
     position: relative;
     display: flex;
     align-items: center;
@@ -84,85 +115,85 @@ video{
     flex-direction: column;
     text-align: center;
     z-index: 10;
+    overflow: hidden;
 }
 
-#page1 #arrow{
-    height:100px;
-    width: 100px;
+#page1 #arrow {
+    height: 80px;
+    width: 80px;
     background-color: transparent;
     border: 2px solid #9ccd17;
     position: absolute;
     display: flex;
     left: 1%;
-    bottom: 1%;
+    bottom: 3%;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     transition: all ease 0.5s;
 }
 
-#page1 #arrow:hover{
+#page1 #arrow:hover {
     scale: 0.4;
     background-color: #24A437;
 }
 
-#page1 #arrow i{
+#page1 #arrow i {
     font-size: 50px;
     font-weight: 100;
-    /* background-color: red; */
-
 }
 
-#page1 h1{
-    font-size: 120px;
+#page1 h1 {
+    font-size: 8vw;
     font-weight: 900;
     position: relative;
 }
 
-#page1 h1::before{
-    content:"EAT. DRINK. PLAY.";
+#page1 h1::before {
+    content: "EAT. DRINK. PLAY.";
     position: absolute;
     color: black;
-    top: -6px;
-    left: -6px;
-    -webkit-text-stroke: 1.2px rgb(11, 101, 7);
+    top: -0.4vw;
+    left: -0.4vw;
+    -webkit-text-stroke: 0.1vw #aeda37;
     z-index: -1;
 }
 
-#page1 h2{
-    font-size: 30px;
-    font-weight: 900;
-    margin-top: 10px;
-    margin-bottom: 10px;
+#page1 h2 {
+    font-size: 2.5vw;
+    font-weight: 800;
+    margin: 0.5vw;
+    text-transform: uppercase;
 }
 
-#page1 p{
-    font-size: 14px;
-    font-weight: 500;
-    width: 50%;
+#page1 p {
+    font-size: 1.5vw;
+    font-weight: 400;
+    width: 60%;
 }
 
-#page2{
+#page2 {
     min-height: 100vh;
     width: 100%;
     z-index: 10;
     position: relative;
-    z-index: 10;
+    font-family: GeneralSans;
 }
 
-#scroller{
+#scroller {
     /* background-color: red; */
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
     position: relative;
     z-index: 10;
-   }
-#scroller::-webkit-scrollbar
-{
+}
+
+#scroller::-webkit-scrollbar {
     display: none;
 }
-#scroller-in{
+
+#scroller-in {
     display: inline-block;
     white-space: nowrap;
     animation-name: scroll;
@@ -172,77 +203,83 @@ video{
 
 }
 
-#scroller h4{
+#scroller h4 {
     display: inline-block;
-    font-size: 110px;
+    font-size: 8vw;
     font-weight: 900;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-    margin-right: 20px;
-    transition: all linear 0.5;
-    color: transparent;
-    -webkit-text-stroke: 2px rgb(191, 240, 55);
+    margin-right: 5vw;
+    transition: all linear 0.1;
+    color: black;
+    -webkit-text-stroke: 1.5px white;
     text-transform: uppercase;
 }
-#scroller h4:hover{
+
+#scroller h4:hover {
     color: rgb(191, 240, 55);
 }
 
 @keyframes scroll {
-    from{
+    from {
         transform: translateX(0);
     }
-    to{
+
+    to {
         transform: translateX(-100%);
     }
 }
 
-#about-us{
-    height: 40vh;
+#about-us {
+    height: 60vh;
     width: 100%;
-    /* background-color: red; */
-    display: flex ;
+    /* background-color: rgb(60, 35, 35); */
+    display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 0px 55px;
+    padding: 0vw 2vw;
     position: relative;
-    z-index: 10 ;
+    z-index: 10;
 }
 
-#about-us img{
-    height: 150px;
-    width: 220px;
+#about-us img {
+    height: 10vw;
+    width: 15vw;
     border-radius: 20px;
     object-fit: cover;
 }
 
-#about-us-in{
-    width: 40%;
+#about-us-in {
+    width: 50%;
     text-align: center;
-}
-#about-us-in h3{
-    font-size: 45px;
-    font-weight: 800;
-    margin-bottom: 20px;
-} 
-
-#about-us-in p{
-    font-size: 20px;
-    line-height: 25px;
+    padding: 1vw;
 }
 
-#cards-container{
-    /* background-color: red; */
-    height: 60vh;
+#about-us-in h3 {
+    font-size: 3vw;
+    font-weight: 900;
+    margin-bottom: 1vw;
+    text-transform: uppercase;
+}
+
+#about-us-in p {
+    font-size: 1.5vw;
+    line-height: 2.5vw;
+    font-weight: 200;
+    word-spacing: 0.5vw;
+}
+
+#cards-container {
+    height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 70px;
+    gap: 4vw;
+    perspective: 1000px;
 }
 
-.cards{
+.cards {
     height: 60%;
-    width: 20%;
-    /* background-color:blue; */
+    width: 25%;
     border-radius: 15px;
     background-size: cover;
     background-position: center;
@@ -250,72 +287,92 @@ video{
     transition: all ease 0.6;
 }
 
-#card1{
+/* .cards h3{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        top: 30%;
+        font-size: 5vw;
+        text-align:center;
+        color: white;
+    } */
+
+#card1 {
     background-image: url(https://sidcup-golf-family.netlify.app/Assests/card1.avif);
 }
-#card2{
+
+#card2 {
     background-image: url(https://sidcup-golf-family.netlify.app/Assests/card2.webp);
 }
-#card3{
+
+#card3 {
     background-image: url(https://c8.alamy.com/comp/HRJKJ4/cricket-practice-batmen-bowlers-bowling-action-netts-HRJKJ4.jpg);
 }
 
-.overlay{
+.overlay {
     height: 100%;
     width: 100%;
     background-color: rgb(191, 240, 55);
-    padding-top: 140px;
-    padding: 30px;
+    padding: 5vw;
     opacity: 0;
     transition: all ease 0.6;
 }
 
-.overlay h4{
+.overlay h4 {
     color: black;
-    font-size: 30px;
+    font-size: 2.5vw;
+    line-height: 2.5vw;
     text-transform: uppercase;
-    /* white-space: nowrap;  */
-    margin-bottom: 20px;
     font-weight: 900;
 }
 
-.overlay p{
+.overlay p {
     color: black;
-    font-size: 13px;
+    font-size: 1.5vw;
+    padding-top: 2vw;
 }
 
-.cards:hover .overlay{
+.cards:hover .overlay {
     opacity: 1;
 }
-.cards:hover{
-    transform: rotate3d(-1,1,0,20deg);
+
+
+.cards:hover {
+    transform: rotate3d(-1, 1, 0, 20deg);
+    /* Try adjusting axis and angle */
 }
 
 
-#green-div{
-    height: 30vh;
+#green-div {
+    height: 40vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(to right top, #9CCA21,#24A437);
+    background: linear-gradient(to right top, #b5f730, #508b32);
 }
 
-#green-div h4{
+
+#green-div #text {
     width: 45%;
-    line-height: 50px;
+    line-height: 3vw;
     font-weight: 600;
     text-align: center;
     color: black;
-    font-size: 27px;
+    font-size: 2vw;
     text-transform: uppercase;
 }
-#green-div img{
+
+#green-div #text h4 {
+    color: black;
+}
+
+#green-div img {
     height: 100%;
     object-fit: cover;
     width: 15%;
 }
 
-#page3{
+#page3 {
     height: 100vh;
     width: 100%;
     background-color: black;
@@ -323,50 +380,53 @@ video{
     align-items: center;
     justify-content: center;
     position: relative;
+    font-family: GeneralSans;
 }
-#page3>p{
-     font-size: 35px;
-     font-weight: 700;
-     width: 55%;
-     line-height: 45px;
+
+#page3 p {
+    font-size: 2vw;
+    font-weight: 700;
+    width: 60%;
+    line-height: 4vw;
     text-align: center;
 }
 
-#page3 img{
+#page3 img {
     position: absolute;
-    height: 60px;
+    height: 5vw;
 }
 
-#page3 #colon1{
-    left: 15%;
+#page3 #colon1 {
+    left: 10%;
     top: 20%;
 }
-#page3 #colon2{
+
+#page3 #colon2 {
     bottom: 20%;
-    right: 15%;
+    right: 10%;
 }
 
-#page4{
-    height:50vh;
+#page4 {
+    height: 45vh;
     width: 100%;
-    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 70px;
+    gap: 3vw;
     position: relative;
+    font-family: GeneralSans;
 }
 
-#page4 h1{
-    font-size: 85px;
+#page4 h1 {
+    font-size: 5.5vw;
     position: absolute;
     top: -1%;
-    font-weight: 700;
+    font-weight: 900;
     color: black;
-    -webkit-text-stroke: 2px white ;
+    -webkit-text-stroke: 1px white;
 }
 
-.elem{
+.elem {
     height: 50%;
     width: 26%;
     overflow: hidden;
@@ -374,125 +434,750 @@ video{
     position: relative;
 }
 
-.elem h2{
+.elem h2 {
     height: 100%;
     width: 100%;
+    font-size: 2.5vw;
+    font-weight: 800;
     background-color: #9CCA21;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
     color: black;
-    font-weight: 40px;
     position: absolute;
     z-index: 10;
     transition: all ease 0.5s;
     text-transform: uppercase;
 }
 
-.elem img{
+.elem img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     scale: 1.1;
 }
 
-.elem:hover h2{
-    color: white;
+.elem:hover h2 {
+    color: rgb(193, 225, 9);
+    border: 1px solid black;
     background-color: transparent;
 }
 
-.elem:hover img{
+.elem:hover img {
     scale: 1;
 }
 
-#footer{
-    height: 40vh;
+#footer {
+    height: 55vh;
     width: 100%;
-    background:linear-gradient(to left bottom,#24A437,#9CCA21 );
+    background: linear-gradient(to right bottom, #B2E724, #0D9F3B);
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content:space-evenly;
-    gap: 100px;
-    padding: 0 90px;
+    font-family: GeneralSans;
 }
 
-#footer>img{
+#footer #f {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3vw;
+
+}
+
+#footer>img {
     position: absolute;
-    left: 4px;
-    height: 90%;
+    height: 95%;
     z-index: 1;
 }
 
-#f1 img{
-    height: 100px;
+#f1 img {
+    height: 10vw;
 }
 
-#f1,#f2,#f3,#f4{
-    width:fit-content;
+#f1,
+#f2,
+#f3,
+#f4 {
+    width: fit-content;
     position: relative;
     z-index: 99;
+    text-align: start;
 }
 
-#f2 h3{
-    font-size:30px;
-    white-space: nowrap;
-    text-transform: uppercase;
-    color: black;
-    font-weight: 900;
-    margin-bottom: 8px;
-}
-
-#f3 h3{
-    font-size:30px;
+#f2 h3 {
+    font-size: 2vw;
     white-space: nowrap;
     text-transform: uppercase;
     color: black;
     font-weight: 800;
-    margin-bottom: 8px;
+    margin-bottom: 0.5vw;
+}
+
+#f3 h3 {
+    font-size: 2vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 800;
+    margin-bottom: 1vw;
 }
 
 
-#f4 h4{
-    font-size:18px;
+#f4 h4 {
+    font-size: 1.2vw;
     white-space: nowrap;
     text-transform: uppercase;
     color: black;
     font-weight: 600;
-    line-height: 20px;
-    margin-bottom: 8px;
+    line-height: 2vw;
+    margin-bottom: 1vw;
 }
 
+#f4 h3 {
+    font-size: 1.5vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 900;
+    line-height: 2vw;
+    margin-bottom: 1vw;
+}
 
-.youtube .cridit{
-    height: 50%;
+#f4 a {
+    text-decoration: none;
+}
+
+#footer #fcpy {
+    height: 5vw;
     width: 100%;
-    padding: 3vw 3vw;
-    position: relative;
+    z-index: 999;
+    margin-top: 2vw;
+    padding: 2vw;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 2vw 4vw;
+    justify-content: space-around;
 }
 
-.youtube{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content:space-around;
-    position: relative;
+#footer #fcpy p {
+    color: black;
+    font-size: 1vw;
+    font-weight: 500;
+    word-spacing: 0.1vw;
 }
 
-.youtube img{
-    height: 80px;
-}
 
-.youtube #logo{
-    padding-right: 2vw;
-}
 
-.youtube #sher{
-    height: 100px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+/* width: 1100px */
+/* ----------------------------------------------------------------------------------------------------- */
+
+
+@media(max-width:1100px) {
+
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+
+    #cursor {
+        /* width: 20px;
+    height: 20px;
+    background-color: rgb(191, 240, 55);
     border-radius: 50%;
+    position: fixed;
+    z-index: 99; */
+        display: none;
+    }
+
+    #cursor-blur {
+        /* width: 300px;
+    height: 300px;
+    background-color: rgba(191, 240, 55, 0.192);
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(50px);
+    z-index: 9; */
+        display: none;
+    }
+
+    #nav {
+        height: 10vh;
+        width: 100%;
+        gap: 0vw;
+        padding: 2vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+    }
+
+    #nav img {
+        height: 20vw;
+    }
+
+    #nav h4 {
+        /* text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2vw; */
+        display: none;
+    }
+
+    #nav h3 {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 2vw;
+    }
+
+    #nav #book {
+        height: 7vw;
+        width: 20vw;
+        padding: 1vw;
+        right: 0vw;
+        border-radius: 50px;
+    }
+
+    video {
+        min-height: 100vh;
+        width: 100%;
+    }
+
+
+
+
+    #page1 {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        padding: 5vw;
+    }
+
+    #page1 #arrow {
+        left: 2%;
+        bottom: 3%;
+    }
+
+    #page1 h1 {
+        font-size: 10vw;
+        font-weight: 900;
+        position: relative;
+    }
+
+    #page1 h2 {
+        font-size: 4vw;
+        font-weight: 700;
+        margin: 5vw;
+    }
+
+    #page1 p {
+        font-size: 3vw;
+        font-weight: 400;
+        width: 70%;
+    }
+
+    #page2 {
+        min-height: 100vh;
+        width: 100%;
+        margin-top: 5vh;
+    }
+
+    #scroller h4 {
+        font-size: 15vw;
+        font-weight: 900;
+        margin-right: 10vw;
+        transition: all linear 0.1;
+        color: black;
+        -webkit-text-stroke: 1.5px white;
+        text-transform: uppercase;
+    }
+
+
+    #about-us {
+        height: 50vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0vw 2vw;
+        position: relative;
+        z-index: 10;
+    }
+
+    #about-us img {
+        height: 15vw;
+        width: 20vw;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    #about-us-in {
+        width: 60%;
+        text-align: center;
+        padding: 2vw;
+    }
+
+    #about-us-in h3 {
+        font-size: 4.5vw;
+        font-weight: 900;
+        margin-bottom: 1vw;
+    }
+
+    #about-us-in p {
+        font-size: 2.5vw;
+        line-height: 3.5vw;
+        font-weight: 200;
+        word-spacing: 0.6vw;
+    }
+
+    #cards-container {
+        height: 90vh;
+        width: 100%;
+        padding: 10vw 5vw;
+        margin-bottom: 10vw;
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cards {
+        height: 30%;
+        width: 90%;
+        margin: 5vw;
+        border-radius: 50px;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        transition: all ease 3;
+    }
+
+    #card1 {
+        background-image: url(https://sidcup-golf-family.netlify.app/Assests/card1.avif);
+    }
+
+    #card2 {
+        background-image: url(https://sidcup-golf-family.netlify.app/Assests/card2.webp);
+    }
+
+    #card3 {
+        background-image: url(https://c8.alamy.com/comp/HRJKJ4/cricket-practice-batmen-bowlers-bowling-action-netts-HRJKJ4.jpg);
+    }
+
+    .overlay {
+        height: 100%;
+        width: 100%;
+        background-color: rgb(191, 240, 55);
+        padding: 5vw;
+        opacity: 0;
+        transition: all ease 0.6;
+    }
+
+    .overlay h4 {
+        font-size: 4vw;
+        line-height: 2.5vw;
+    }
+
+    .overlay p {
+        font-size: 3vw;
+        padding-top: 2vw;
+    }
+
+
+    #green-div {
+        height: 20vh;
+        background: linear-gradient(to right top, #b5f730, #508b32);
+    }
+
+
+    #page3 {
+        height: 50vh;
+        width: 100%;
+    }
+
+    #page3 p {
+        font-size: 2.5vw;
+        font-weight: 700;
+        width: 60%;
+        line-height: 4vw;
+        word-spacing: 0.5vw;
+        text-align: center;
+    }
+
+
+    #page4 {
+        height: 40vh;
+        width: 100%;
+    }
+
+    #page4 h1 {
+        font-size: 5.5vw;
+        position: absolute;
+        top: 15%;
+        -webkit-text-stroke: 1.5px white;
+    }
+
+
+    .elem h2 {
+        padding: 5vw;
+        font-size: 3vw;
+    }
+
+    #footer {
+        height: 30vh;
+    }
+
+
+
+    #footer #fcpy {
+        height: 5vw;
+        width: 100%;
+        padding: 5vw;
+    }
+
+    #footer #fcpy p {
+        font-size: 2vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+/* width: 600px */
+/* ------------------------------------------------------------------------------------ */
+
+@media(max-width:600px) {
+    #nav {
+        background-color: rgb(18, 23, 21);
+        height:10vh;
+        width: 100%;
+        gap: 0vw;
+        padding: 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #nav img {
+        height: 30vw;
+    }
+
+    #nav h4 {
+        display: none;
+    }
+
+
+    #nav h3 {
+        font-weight: 400;
+        font-size: 3vw;
+    }
+
+    #nav #book {
+        height: 10vw;
+        width: 30vw;
+        padding: 2vw;
+        right: 0vw;
+        border: 3px solid #aeda37;
+    }
+
+
+    #main {
+        position: relative;
+        background-color: rgba(0, 0, 0, );
+        overflow: hidden;
+    }
+
+    #page1 {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        z-index: 10;
+        overflow: hidden;
+    }
+
+    #page1 #arrow {
+        height: 70px;
+        width: 70px;
+        left: 3%;
+        bottom: 2%;
+    }
+
+    #page1 #arrow:hover {
+        scale: 0.4;
+    }
+
+    #page1 #arrow i {
+        font-size: 40px;
+    }
+
+    #page1 h1 {
+        font-size: 20vw;
+        font-weight: 900;
+    }
+
+    #page1 h1::before {
+        top: -0.8vw;
+        left: -2vw;
+        -webkit-text-stroke: 0.3vw #aeda37;
+    }
+
+    #page1 h2 {
+        font-size: 5vw;
+    }
+
+    #page1 p {
+        width: 70%;
+    }
+
+    #page2 {
+        /* background-color: #1c2a1e; */
+        min-height: 100vh;
+        width: 100%;
+        padding: 2vw;
+    }
+
+
+    #scroller h4 {
+        margin-top: 10vh;
+        font-size: 20vw;
+        font-weight: 900;
+    }
+
+    #about-us {
+        height: 70vh;
+        width: 100%;
+    }
+
+    #about-us img {
+        height: 40vh;
+        width: 20%;
+    }
+
+    #about-us-in {
+        padding: 2vw;
+    }
+
+    #about-us-in h3 {
+        font-size: 6vw;
+        margin-bottom: 5vw;
+    }
+
+    #about-us-in p {
+        font-size: 3.5vw;
+        line-height: 5vw;
+        font-weight: 300;
+        word-spacing: 0.5vw;
+        padding: 2vw;
+    }
+
+    #card1 {
+        background-image: url(https://sidcup-golf-family.netlify.app/Assests/card1.avif);
+    }
+
+    #card2 {
+        background-image: url(https://sidcup-golf-family.netlify.app/Assests/card2.webp);
+    }
+
+    #card3 {
+        background-image: url(https://c8.alamy.com/comp/HRJKJ4/cricket-practice-batmen-bowlers-bowling-action-netts-HRJKJ4.jpg);
+    }
+
+    .overlay {
+        padding: 10vw;
+    }
+
+    .overlay h4 {
+        font-size: 6vw;
+    }
+
+    .overlay p {
+        font-size: 4vw;
+        padding-top: 5vw;
+    }
+
+
+    #green-div {
+        height: 25vh;
+    }
+
+
+    #green-div #text {
+        width: 60%;
+        line-height: 6vw;
+        font-weight: 900;
+        font-size: 4vw;
+    }
+
+
+    #page3 {
+        /* background-color: rgb(55, 26, 26); */
+        background-color: black;
+    }
+
+    #page3 p {
+        font-size: 4vw;
+        font-weight: 500;
+        width: 70%;
+        line-height: 5vw;
+    }
+
+
+    #page4 {
+        /* background-color: darkgreen; */
+        height: 20vh;
+        width: 100%;
+    }
+
+    #page4 h1 {
+        top: 21%;
+        -webkit-text-stroke: 0.5px white;
+    }
+
+    .elem {
+        height: 40%; 
+        width: 26%;
+    }
+
+    .elem h2 {
+        font-size: 3.5vw;
+        padding: 5vw;
+    }
+
+    #footer {
+        height: 30vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    #footer #f {
+        display: flex;
+        align-items: start;
+        justify-content:space-evenly ;
+        flex-wrap: wrap;
+        padding: 2vw;
+    }
+
+
+    #f1 img {
+        height: 20vw;
+    }
+
+    #f2 h3 {
+        font-size: 3vw;
+        white-space:normal;
+        text-transform: uppercase;
+        color: black;
+        font-weight: 800;
+        
+    }
+
+    #f3 h3 {
+        font-size: 3vw;
+        white-space: normal;
+        text-transform: uppercase;
+        color: black;
+        font-weight: 800;
+        line-height: 4vw;
+    }
+
+    #f4{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+    }
+
+    #f4 h4 {
+        font-size: 2vw;
+        white-space: normal;
+        font-weight: 500;
+        line-height: 3vw;
+        margin-bottom: 0vw;
+    }
+
+    #f4 h3 {
+        font-size: 2vw;
+        white-space: nowrap;
+        text-transform: uppercase;
+        color: black;
+        font-weight: 900;
+        line-height: 2vw;
+        margin-bottom: 0vw;
+    }
+
+    #f4 a {
+        text-decoration: none;
+    }
+
+    #footer #fcpy {
+        /* display: none; */
+        padding: 2vw;
+    }
+
+    #footer #fcpy p {
+        color: black;
+        font-size: 2vw;
+        font-weight: 500;
+        word-spacing: 0.1vw;
+    }
+
+
+
+
+
+
 }
